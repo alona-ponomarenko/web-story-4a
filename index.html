@@ -21,13 +21,14 @@
     data-600p="transform:translate(-250%,-50%);"
     data-700p="transform:translate(-300%,-50%);"
     data-800p="transform:translate(-350%,-50%);"
-    data-900p="transform:translate(-400%,-50%);">
+    data-900p="transform:translate(-400%,-50%);"
+    >
 
 
 <!--Start of Root-->
 
 <div class="root"
-    data-0="left:0%;margin-left:0%;"
+    data-0=" display:block; left:0%;margin-left:0%;"
     data-100p="left:8%;margin-left:0%;"
     data-200p="left:55%;margin-left:10%;"
     data-300p="left:105%;margin-left:10%;"
@@ -37,6 +38,7 @@
     data-700p="left:305%;margin-left:10%;"
     data-800p="left:355%;margin-left:10%;"
     data-900p="left:405%;margin-left:10%;"
+    data-920p="display:none;"
 >
 
 <div class="dialogue-box-root1"></div>
@@ -55,11 +57,16 @@
          data-180p="opacity:0; top:8em; left:0%;"
         data-185p=" display:initial; opacity:1; top:7em; left:88%;"
         data-230p="top:7em; opacity:0;"
+        data-870p="top:8em; opacity:0;"
+        data-880p="top:7em; opacity:1;"
       >
       <div class="bullet"
         data-190p="opacity:0; top:7em; left:120%;"
         data-195p=" display:initial; opacity:1; top:7em; left:1000%;"
         data-200p="opacity:0;"
+        data-880p="opacity:0; top:7em; left:120%;"
+        data-885p="display:initial; opacity:1; top:7em; left:1000%;"
+        data-890p="opacity:0;"
       >
           
       </div>
@@ -237,11 +244,11 @@
 </div>
 
 <div class="villain"
-        data-175p="bottom:0%; right:20%; opacity:0; z-index:-1;"
-        data-185p="bottom:37%; right:20%; opacity:1; z-index:1;"
-        data-195p="bottom:37%; right:4%; opacity:1; z-index:1;"
+        data-175p="bottom:20%; right:20%; opacity:0; z-index:-1;"
+        data-185p="bottom:28%; right:20%; opacity:1; z-index:1;"
+        data-195p="bottom:28%; right:4%; opacity:1; z-index:1;"
         data-200p="bottom:20%; opacity::0.5; display:initial; z-index:-11;"
-        data-205p="bottom:0%; display:none;"
+        data-205p="display:none;"
 ><!--Start of villain-->
 
   <div class="villain-hair"></div>
@@ -328,8 +335,8 @@
 
 <div class="grave"
         data-200p="bottom:-10%; display:none; opacity:0; z-index:-11111;"
-        data-210p="bottom:20%; display:initial; z-index:-5; display:initial; opacity:0.8;"
-        data-220p="bottom:28%; display:initial; opacity:1; z-index:1;"
+        data-210p="bottom:26%; display:initial; z-index:-5; display:initial; opacity:0.8;"
+        data-220p="bottom:26%; display:initial; opacity:1; z-index:1;"
 >
 
 <p>R.I.P.<br>
@@ -494,7 +501,7 @@
     data-600p="left:40%;margin-left:10%; z-index:1;"
     data-700p="left:155%;margin-left:10%;"
     data-800p="left:255%;margin-left:10%;"
-    data-900p="left:355%;margin-left:10%;"
+    data-900p="left:300%;margin-left:10%;"
 >
 
   <div class="shaw-hair">
@@ -587,13 +594,11 @@
 <div class="ground"></div>
             </div><!--End of slide 9-->
 
-            <div id="slide-10" class="slide">
+            <div id="slide-10"  
+              data-930p="display:block;"
+              data-960p="display:none;"
 
-              <div class="last-slide">
-                  <h2>CAN YOU HEAR US?</h2>
-                  <img src="https://yt3.ggpht.com/-vHGTWYc3Obk/AAAAAAAAAAI/AAAAAAAAAAA/q4HdmhfLawk/s900-c-k-no-rj-c0xffffff/photo.jpg">
-              </div> <!--End of last slide-->
-
+            " class="slide">
 
 <!--Start of TV-->
 <div id="clouds"><!--Clouds-->
@@ -623,7 +628,10 @@
         <div class="line2"></div>
         <div class="line3"></div>
 
-  <div class="screen"></div>
+  <div class="screen"
+   data-850p=""
+        data-890p=""
+  ></div>
 
   <div class="tv-leftleg"></div>
   <div class="tv-rightleg"></div>
@@ -634,7 +642,27 @@
 <div class="ground"></div>
             </div><!--End of slide 10-->
 
-           
+
+            <div id="slide-11" class="slide"
+              data-895p="opacity:0;"
+              data-920p="opacity:1;"  
+            >
+            
+            <div class="last-slide"
+            > 
+                    <div id="part-one">
+
+                  <h2>CAN YOU HEAR US?</h2>
+                  <p>    
+                  NETFLIX
+                  BAD ROBOT
+                  WARNER BROTHERS</p>   
+
+                     </div>
+              </div> <!--End of last slide-->
+
+                 </div><!--End of slide 11-->
+
 
         </div><!--End of slides-->
   </div><!--End of slides-container-->
