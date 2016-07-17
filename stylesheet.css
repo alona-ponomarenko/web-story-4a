@@ -1,3 +1,5 @@
+/************* Global layout *************/
+
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 body {
@@ -8,6 +10,8 @@ body {
 p {
   font-size: 1.5em;
 }
+
+/************* End of Global layout *************/
 
 /************* Skrollr layout *************/
 
@@ -137,6 +141,132 @@ html, body {
 
 /************* End of Skrollr layout *************/
 
+/********** SKY AND CLOUDS *********/
+
+#clouds{
+  height:100%;
+  padding: 10% 0;
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+  width: 200px; height: 60px;
+  background: #fff;
+  
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  
+  position: relative; 
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute; 
+  background: #fff;
+  width: 100px; height: 80px;
+  position: absolute; top: -15px; left: 10px;
+  
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px; height: 120px;
+  top: -55px; left: auto; right: 15px;
+}
+
+/*Animating clouds*/
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+  
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6; /*opacity proportional to the size*/
+  
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+  left: -250px; top: -200px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+  left: 470px; top: -250px;
+  
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+  left: -150px; top: -150px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+
+/********** End of SKY AND CLOUDS *********/
+
+.ground {
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height:25%;
+  background-color: #BDAE97;
+}
+
+/********Start of Slide 1 ***************/
 
 /********Start of Ribbon ***************/
 
@@ -275,122 +405,9 @@ html, body {
 
 /********End of Ribbon ***************/
 
-/********** SKY AND CLOUDS *********/
+/******** End of Slide 1 ***************/
 
-#clouds{
-  height:100%;
-  padding: 10% 0;
-}
 
-/*Time to finalise the cloud shape*/
-.cloud {
-  width: 200px; height: 60px;
-  background: #fff;
-  
-  border-radius: 200px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  
-  position: relative; 
-}
-
-.cloud:before, .cloud:after {
-  content: '';
-  position: absolute; 
-  background: #fff;
-  width: 100px; height: 80px;
-  position: absolute; top: -15px; left: 10px;
-  
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-}
-
-.cloud:after {
-  width: 120px; height: 120px;
-  top: -55px; left: auto; right: 15px;
-}
-
-/*Animating clouds*/
-.x1 {
-  -webkit-animation: moveclouds 15s linear infinite;
-  -moz-animation: moveclouds 15s linear infinite;
-  -o-animation: moveclouds 15s linear infinite;
-}
-
-/*variable speed, opacity, and position of clouds for realistic effect*/
-.x2 {
-  left: 200px;
-  
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  transform: scale(0.6);
-  opacity: 0.6; /*opacity proportional to the size*/
-  
-  /*Speed will also be proportional to the size and opacity*/
-  /*More the speed. Less the time in 's' = seconds*/
-  -webkit-animation: moveclouds 25s linear infinite;
-  -moz-animation: moveclouds 25s linear infinite;
-  -o-animation: moveclouds 25s linear infinite;
-}
-
-.x3 {
-  left: -250px; top: -200px;
-  
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0.8; /*opacity proportional to the size*/
-  
-  -webkit-animation: moveclouds 20s linear infinite;
-  -moz-animation: moveclouds 20s linear infinite;
-  -o-animation: moveclouds 20s linear infinite;
-}
-
-.x4 {
-  left: 470px; top: -250px;
-  
-  -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
-  transform: scale(0.75);
-  opacity: 0.75; /*opacity proportional to the size*/
-  
-  -webkit-animation: moveclouds 18s linear infinite;
-  -moz-animation: moveclouds 18s linear infinite;
-  -o-animation: moveclouds 18s linear infinite;
-}
-
-.x5 {
-  left: -150px; top: -150px;
-  
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0.8; /*opacity proportional to the size*/
-  
-  -webkit-animation: moveclouds 20s linear infinite;
-  -moz-animation: moveclouds 20s linear infinite;
-  -o-animation: moveclouds 20s linear infinite;
-}
-
-@-webkit-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
-}
-@-moz-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
-}
-@-o-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
-}
-
-/********** End of SKY AND CLOUDS *********/
 .axe {
  
   z-index: 1111;
@@ -1050,16 +1067,8 @@ Colors:
 
 /*********End of Root*********/
 
-.ground {
-  position: absolute;
-  bottom:0;
-  width:100%;
-  height:25%;
-  background-color: #BDAE97;
-}
 
-
-/***********Slide 2 **************/
+/*********** Start of Slide 2 **************/
 
 @keyframes instruction {
   0% {opacity:0;}
@@ -1078,8 +1087,427 @@ Colors:
 
 /***********End of Slide 2 **************/
 
-/***********Slide 3 **************/
+/*********** Start of Slide 3 **************/
 
+#ball img{
+  position: absolute;
+  bottom:29%;
+  left:6%;
+  width:60px;
+  z-index: 1111111111111;
+}
+
+.villain {
+  position:absolute;
+  bottom:37%;
+  left:5%;
+  width:170px;
+}
+
+.villain-hair {
+  position:absolute;
+  top:-5%;
+  left:-3%;
+  width: 90px;
+  height:78px;
+  border:2px solid #000;
+  background-color:#000;
+  z-index:-1;
+  border-radius:60% 60% 50% 50%; 
+}
+
+.villain-left-front-hair1 {
+  position:absolute;
+  left:-3%;
+  width:40px;
+  height:60px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(20deg);
+}
+
+.villain-left-front-hair2 {
+  position:absolute;
+  left:5%;
+  width:40px;
+  height:45px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(20deg);
+}
+
+.villain-left-front-hair3 {
+  position:absolute;
+  left:13%;
+  width:40px;
+  height:45px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(20deg);
+}
+
+.villain-right-front-hair1 {
+  position:absolute;
+  left:20%;
+  width:40px;
+  height:60px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(-190deg);
+}
+
+.villain-right-front-hair2 {
+  position:absolute;
+  left:15%;
+  width:40px;
+  height:40px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(-190deg);
+}
+
+.villain-right-front-hair3 {
+  position:absolute;
+  left:7%;
+  width:40px;
+  height:43px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(-190deg);
+}
+
+.villain-right-front-hair4 {
+  position:absolute;
+  left:-1%;
+  width:40px;
+  height:40px;
+  border-left:15px solid #000;
+  border-radius:50%;
+  z-index:1;
+  transform:rotate(-190deg);
+}
+
+.villain-head {
+  width: 85px;
+  height:68px;
+  border-top:15px solid #000;
+  border-radius: 50% 50% 100% 100%;
+  border-bottom:transparent;
+  background-color:#FED7B0;
+}
+
+.villain-left-eye {
+  position: absolute;
+  top:40%;
+  left:5%;
+  width:10px;
+  height:10px;
+  border:3px solid #fff;
+  border-radius: 50%;
+  background-color:#000;
+}
+
+.villain-right-eye {
+  position: absolute;
+  top:40%;
+  left:35%;
+  width:10px;
+  height:10px;
+  border:3px solid #fff;
+  border-radius: 50%;
+  background-color:#000;
+}
+
+.villain-nose {
+  position:absolute;
+  top:60%;
+  left:23%;
+  width:10px;
+  height:5px;
+  border-bottom:3px solid #DBAF90;
+  border-radius:50%;
+}
+
+.villain-mouth {
+  position: absolute;
+  bottom:15%;
+  left:16%;
+  width:30px;
+  height:2px;
+  border:2px solid #000;
+  border-radius: 0% 0% 80% 80%;
+  background-color:#fff;
+}
+
+.villain-neck {
+  position:absolute;
+  bottom:-5%;
+  left:35px;
+  background-color:#f00;
+  width: 20px;
+  height:5px;
+  background-color:#FED7B0;
+}
+
+.villain-torso {
+ position:absolute;
+ bottom:-70%;
+ left:23px;
+ width:40px;
+ height:50px;
+ border:2px solid #000;
+ border-radius:25% 25% 5% 5%;
+ background-color:#FED7B0;
+ border-top:transparent;
+}
+
+@keyframes left-hand {
+  0% {transform:rotate(initial)}
+  50%{transform:rotate(120deg); top:-27%;}
+  100% {transform:rotate(initial)}
+}
+
+.villain-left-hand {
+ position:absolute;
+ top:0;
+ left:-40%;
+ width:12.5px;
+ height:30px;
+ transform:rotate(50deg);
+ background-color:#006699;
+ border-radius: 25%;
+ border-left:2px solid #000;
+ animation-name: left-hand;
+ animation-duration: 3s;
+ animation-iteration-count:infinite;
+ z-index:11111;
+}
+
+.villain-left-arm {
+  position:absolute;
+  left:-15%;
+  bottom:-30%;
+  width: 14px;
+  height: 14px;
+  border:2px solid #000;
+  border-left:transparent;
+  border-right:transparent;
+  border-radius: 30%;
+  background-color:#FED7B0;
+}
+
+@keyframes right-hand {
+  0% {transform:rotate(initial)}
+  50%{transform:rotate(-100deg); top:-20%;}
+  100% {transform:rotate(initial)}
+}
+
+.villain-right-hand {
+ position:absolute;
+ top:1%;
+ right:-40%;
+ width:12.5px;
+ height:30px;
+ transform:rotate(-50deg);
+ background-color:#006699;
+ border-radius: 25%;
+ animation-name: right-hand;
+ animation-duration: 3s;
+ border-right:2px solid #000;
+ animation-iteration-count:infinite;
+ z-index:11111;
+}
+
+.villain-right-arm {
+  position:absolute;
+  left:0;
+  bottom:-30%;
+  width: 14px;
+  height: 14px;
+  border:2px solid #000;
+  border-left:transparent;
+  border-right:transparent;
+  border-radius: 30%;
+  background-color:#FED7B0;
+}
+
+.villain-t-shirt {
+  position:relative;
+  bottom:0;
+  left:-9%;
+  width:45px;
+  height:45px;
+  border:2px solid #000;
+  background-color:#006699;
+  border-radius:12% 12% 0 0;
+}
+
+.villain-arc {
+  position: absolute;
+  top:-10%;
+  left:25%;
+  width: 20px;
+  height:12.5px;
+  background-color:#000;
+  border-radius: 10% 10% 50% 50%;
+  background-color:#FED7B0;
+}
+
+.villain-legs {
+  position:relative;
+}
+
+@keyframes left-leg {
+  0% {transform:rotate(10deg);}
+   50% {transform:rotate(15deg);}
+  100% {transform:rotate(-10deg);}
+}
+
+.villain-left-leg {
+  position:absolute;
+  bottom:-20px;
+  width:12.5px;
+  height: 14px;
+  border:2px solid #000;
+  left:0;
+  background-color: #262626;
+  transform:rotate(10deg);
+  border-radius:25%;
+  z-index:-1;
+  animation-name: left-leg;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes villain-right-leg {
+  0% {transform:rotate(-10deg);}
+   50% {transform:rotate(15deg);}
+  100% {transform:rotate(-10deg);}
+}
+
+.villain-right-leg {
+  position:absolute;
+  bottom:-20px;
+  right:0;
+  width:12.5px;
+  height: 14px;
+  border:2px solid #000;
+  background-color: #262626;
+  border-radius: 25%;
+  transform:rotate(-10deg);
+  z-index:-1;
+  animation-name: villain-right-leg;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+}
+
+.villain-left-foot {
+  position:absolute;
+  top:80%;
+  left:-15%;
+  width:17.5px;
+  height:10px;
+  border:2px solid #000;
+  border-radius: 20% 40% 15% 10%;
+  background-color: #262626;
+}
+
+.villain-right-foot {
+  position:absolute;
+  top:80%;
+  left:-15%;
+  width:17.5px;
+  height:10px;
+  border:2px solid #000;
+  border-radius: 20% 40% 15% 10%;
+  background-color: #262626;
+}
+
+
+.cross1 {
+  position:absolute;
+  bottom:25%;
+  left:7%;
+  z-index: -111111;
+}
+
+.cross2 {
+  position:absolute;
+   bottom:23%;
+  left:-3%;
+  z-index: -111111;
+}
+
+.cross3 {
+ position:absolute;
+  bottom:25%;
+  left:23%;
+  z-index: -111111;
+}
+
+.cross4 {
+  position:absolute;
+  bottom:23%;
+  left:33%;
+  z-index: -111111;
+}
+
+.crossX {
+  position:absolute;
+  top:-4em;
+  left:0.7em;
+  width:125px;
+  height:20px;
+  
+  background-color:#ccc;
+  z-index:1;
+}
+
+.crossY {
+  position:absolute;
+  top:-7em;
+  left:4em;
+  width:20px;
+  height:125px;
+  z-index:-1;
+  background-color:#ccc;
+}
+
+.grave {
+  position: absolute;
+  bottom:28%;
+  left: 15%;
+  width: 150px;
+  height:200px;
+  border-radius: 50% 50% 0 0;
+  background-color:#d4e4e4;
+  z-index: 1;
+}
+.grave p {
+  padding-top:0.5em;
+  text-align:center;
+  font-size:2em;
+}
+
+.grass {
+  position:absolute;
+  bottom: -1.8em;
+  left:-0.5em;
+  width: 170px;
+  height:30px;
+  background-color:#99cc00;
+  border-radius: 5% 5% 0 0;
+}
+
+/*********** End of Slide 3 **************/
+
+/*********** Start of Slide 4 **************/
 
 
 .dialogue-box-fan1 {
@@ -1133,14 +1561,14 @@ padding:5% 0 5% 3%;
 
 .fan-arrow img {
   width:55%;
-  height:55%;
+  height:45%;
 }
 
 
 .fan {
-  position:relative;
-  left:70%;
-  bottom:7%;
+ position:absolute;
+  bottom:30%;
+  right:17%;
   width:170px;
   z-index: 1;
 }
@@ -1591,9 +2019,9 @@ padding:5% 0 5% 3%;
   background-color: #262626;
 }
 
-/*********End of Slide 3 ***********/
+/*********End of Slide 4 ***********/
 
-/*********Start of Slide 4. LOFT ***********/
+/*********Start of Slide 5. LOFT ***********/
 .loft-bg {
   background-image: url("img/loft-bg.jpg");
   background-position: 50% 46%; 
@@ -1640,9 +2068,22 @@ padding:5% 0 5% 3%;
   animation-iteration-count:infinite;
 }
 
-/*********End of Slide 4. LOFT ***********/
+/*********End of Slide 5. LOFT ***********/
 
-/*********Start of Slide 5 ***********/
+/*********Start of Slide 6 **********/
+
+
+.loft-bg2 {
+  background-image: url("img/loft-bg2.jpg");
+  background-position: 50% 46%; 
+  width:100%;
+  height: 100%;
+  background-size: 100%;
+  z-index: 1111;
+}
+/*********End of Slide 6 **********/
+
+/*********Start of Slide 7 ***********/
 
 .shaw-arrow {
   position: absolute;
@@ -1660,10 +2101,10 @@ padding:5% 0 5% 3%;
 
 
 .shaw {
-  position:relative;
+  position:absolute;
   max-width:200px;
-  bottom:15%;
-  left:62%;
+  bottom:25%;
+  right:25%;
   margin-top:50px;
   z-index:1;
 }
@@ -1675,16 +2116,16 @@ padding:5% 0 5% 3%;
 
 .shaw-back-hair {
   position:absolute;
-  left:-4%;
+  left:-7%;
   width:75px;
-  height:82.5px;
+  height:90px;
   background-color:#3F3333;
-  border-radius: 50% 50%; 50% 50%;
+  border-radius: 50% 50%; 0 0;
 }
 
 .shaw-left-front-hair1 {
   position:absolute;
-  left:-3%;
+  left:-7%;
   width:50px;
   height:60px;
   border-left:15px solid #3F3333;
@@ -1695,7 +2136,7 @@ padding:5% 0 5% 3%;
 
 .shaw-left-front-hair2 {
   position:absolute;
-  left:-7%;
+  left:-11%;
   width:30px;
   height:75px;
   border-left:15px solid #3F3333;
@@ -1706,7 +2147,7 @@ padding:5% 0 5% 3%;
 
 .shaw-left-front-hair3 {
   position:absolute;
-  left:-10%;
+  left:-20%;
   width:35px;
   height:75px;
   border-left:15px solid #3F3333;
@@ -1718,7 +2159,7 @@ padding:5% 0 5% 3%;
 .shaw-left-front-hair4 {
   position:absolute;
   margin-top:10px;
-  left:-8%;
+  left:-18%;
   width:35px;
   height:75px;
   border-left:15px solid #3F3333;
@@ -1728,7 +2169,7 @@ padding:5% 0 5% 3%;
 
 .shaw-right-front-hair1 {
   position:absolute;
-  left:5%;
+  left:10%;
   width:50px;
   height:60px;
   border-right:15px solid #3F3333;
@@ -1739,8 +2180,8 @@ padding:5% 0 5% 3%;
 
 .shaw-right-front-hair2 {
   position:absolute;
-  left:15%;
-  width:30px;
+  left:28%;
+  width:40px;
   height:75px;
   border-right:15px solid #3F3333;
   border-radius:50%;
@@ -1750,7 +2191,7 @@ padding:5% 0 5% 3%;
 
 .shaw-right-front-hair3 {
   position:absolute;
-  left:10%;
+  left:25%;
   width:35px;
   height:75px;
   border-right:15px solid #3F3333;
@@ -1762,7 +2203,7 @@ padding:5% 0 5% 3%;
 .shaw-right-front-hair4 {
   position:absolute;
   margin-top:10px;
-  left:13%;
+  left:28%;
   width:35px;
   height:75px;
   border-right:15px solid #3F3333;
@@ -2101,44 +2542,10 @@ padding:5% 0 5% 3%;
   background-color: #262626;
 }
 
-/*********End of Slide 5 ***********/
-
-/*********Start of Slide 5 **********/
+/*********End of Slide 7 ***********/
 
 
-.loft-bg2 {
-  background-image: url("img/loft-bg2.jpg");
-  background-position: 50% 46%; 
-  width:100%;
-  height: 100%;
-  background-size: 100%;
-  z-index: 1111;
-}
-/*********End of Slide 5 **********/
-
-
-.last-slide {
-  display:none;
-  width:100%;
-  height:100%;
-  background-color:#CE1C22; 
-  color:#fff;
-}
-
-.last-slide img {
-  display: block;
-  margin: auto;
-  width:30%;
-}
-
-.last-slide h2 {
-  margin:0;
-  padding:5% 0;
-  text-align: center;
-}
-
-
-/********* TV *******************/
+/********* Start of slide 10. TV *******************/
 
 
 .tv {
@@ -2307,8 +2714,27 @@ animation: noiseAnim 0.5s infinite linear alternate;
   z-index:-1;
 }
 
-/********* TV *******************/
+/********* End of slide 10. TV *******************/
 
+.last-slide {
+  display:none;
+  width:100%;
+  height:100%;
+  background-color:#CE1C22; 
+  color:#fff;
+}
+
+.last-slide img {
+  display: block;
+  margin: auto;
+  width:30%;
+}
+
+.last-slide h2 {
+  margin:0;
+  padding:5% 0;
+  text-align: center;
+}
 
 /**********Start of Media Queries ***************/
 
@@ -2396,7 +2822,16 @@ animation: noiseAnim 0.5s infinite linear alternate;
   border-radius: 50%;
 }
 
-} /**** End of m(in-width:150px) ******/
+.fan {
+ position:absolute;
+  bottom:28%;
+  right:17%;
+  width:170px;
+  z-index: 1;
+}
+
+
+} /**** End of (min-width:1500px) ******/
 
 
 

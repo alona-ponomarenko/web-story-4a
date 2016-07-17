@@ -149,10 +149,12 @@ $(".dialogue-box-fan1").typed({
 
 
 /******On page reload, go to the start (script for Chrome) ********/
-
+/*
 window.onbeforeunload = function(){
   window.scrollTo(0,0);
 }
+
+*/
 /******End of script for Chrome ********/
 
 
