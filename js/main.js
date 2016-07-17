@@ -158,4 +158,15 @@ window.onbeforeunload = function(){
 */
 /******End of script for Chrome ********/
 
+/*copy mute script*/
 
+var audio = document.getElementById('background_audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+
+/*end copy mute script*/
