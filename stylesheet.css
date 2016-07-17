@@ -106,6 +106,12 @@ html, body {
       -webkit-transform: translate(800%,100%);
 }
 
+#slide-11 {
+    background-size: cover;
+     transform: translate(800%,100%);
+      -webkit-transform: translate(800%,100%);
+}
+
 #slides {
     width: 200%;
     height: 200%;
@@ -2127,7 +2133,7 @@ padding:5% 0 5% 3%;
 .shaw {
   position:absolute;
   max-width:200px;
-  bottom:25%;
+  bottom:28%;
   left:40%;
   margin-top:50px;
    z-index: 1111111111111111111111;
@@ -2657,8 +2663,15 @@ padding:5% 0 5% 3%;
   border: 2px solid #000;
   border-radius:15%;
   margin: 6%;
+  background-color:#e63939;
   background-image: url(http://prashantsani.com/Misc/codepen/noise.jpg);
 animation: noiseAnim 0.5s infinite linear alternate;
+}
+
+.screen p {
+  color:#fff;
+  font-size:3em;
+  text-align: center;
 }
 
 .big-button {
@@ -2740,26 +2753,29 @@ animation: noiseAnim 0.5s infinite linear alternate;
 
 /********* End of slide 10. TV *******************/
 
-.last-slide {
-  display:none;
-  width:100%;
-  height:100%;
-  background-color:#CE1C22; 
-  color:#fff;
+#slide-11 {
+  background-color: #CE1C22;
 }
 
-.last-slide img {
-  display: block;
-  margin: auto;
-  width:30%;
+
+@keyframes cuhu {
+  0% {font-size: 5em; background-color: #fff; color:000;}
+  50% {font-size: 6em; background-color: #000; color: #fff;}
+  100% {font-size: 5em; background-color: #fff; color:#000;}  
+}
+
+#part-one {
+   animation-name: cuhu;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  height:100vh;
 }
 
 .last-slide h2 {
   margin:0;
-  padding:5% 0;
   text-align: center;
+  font-size: 3em;
 }
-
 /**********Start of Media Queries ***************/
 
 @media (min-width: 1500px) {
@@ -2854,14 +2870,22 @@ animation: noiseAnim 0.5s infinite linear alternate;
   z-index: 1;
 }
 
+.shaw {
+  bottom:26%;
+ }
+
 } /**** End of (min-width:1500px) ******/
 
 
+@media (max-width: 1250px) {
 
+.last-slide h2 {
+  margin:0;
+  text-align: center;
+  font-size: 2.3em;
+}
 
-
-
-
+} /**** End of (max-width: 1200px) ******/
 
 
 
