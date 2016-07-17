@@ -414,10 +414,31 @@ html, body {
 }
 .axe img{
   /* display: none;*/
-    width:100%;
   position: absolute;
+  width:100%;
   top:5em;
   left:75%;
+}
+
+.tiny-gun-right-class {
+  z-index: 1111;
+}
+.tiny-gun-right-class img{
+  /* display: none;*/
+  position: absolute;
+  width:70%;
+   top:7em;
+}
+
+.bullet {
+  position: absolute;
+  top:7em;
+  left:120%;
+  width:20px;
+  height:5px;
+  border:1px solid #000;
+  border-radius: 0% 100% 100% 0%;
+  background-color: #FDD302;
 }
 
 .dialogue-box-root1 {
@@ -475,10 +496,12 @@ Colors:
   bottom:10%;
   left:8%;
   z-index:111111111;
+  /*
   animation-name: flying-root;
   animation-duration:15s;
   animation-iteration-count: 1;
   animation-delay: 1s;
+  */
 }
 
 .hair {
@@ -780,7 +803,7 @@ Colors:
   transform: scaleX(-1);
   top:40px;
   left:-115px;
-  z-index:-1;
+  z-index:-1111;
 }
 
 .left-wing img {
@@ -798,7 +821,7 @@ Colors:
   top:-70px;
   left:50px;
   width:140px;
-  z-index:-1;
+  z-index:-1111;
   animation-name:left-wing;
   animation-duration:3s;
   animation-iteration-count:infinite;
@@ -1237,11 +1260,11 @@ Colors:
 
 .villain-mouth {
   position: absolute;
-  bottom:15%;
+  bottom:10%;
   left:16%;
   width:30px;
-  height:2px;
-  border:2px solid #000;
+  height:10px;
+  border:1px solid #000;
   border-radius: 0% 0% 80% 80%;
   background-color:#fff;
 }
@@ -2105,9 +2128,9 @@ padding:5% 0 5% 3%;
   position:absolute;
   max-width:200px;
   bottom:25%;
-  right:25%;
+  left:40%;
   margin-top:50px;
-  z-index:1;
+   z-index: 1111111111111111111111;
 }
 
 .shaw-hair{
@@ -2314,7 +2337,7 @@ padding:5% 0 5% 3%;
 .shaw-mouth {
   position:absolute;
   bottom:18%;
-  left:30%;
+  left:32%;
   width:25px;
   height:5px;
   border:2px solid #000;

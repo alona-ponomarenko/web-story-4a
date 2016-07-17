@@ -42,9 +42,29 @@
 <div class="dialogue-box-root1"></div>
 <div class="dialogue-box-root2"></div>
 
+
 <div class="axe">
-      <img src="img/axe.png">
+      <img src="img/axe.png"
+         data-180p="opacity:1; top:5em; left:75%;"
+        data-185p="opacity:0; top:15em; left:0%;"
+      >
     </div>
+
+    <div class="tiny-gun-right-class">
+      <img class="tiny-gun-right-class" src="img/tiny-gun-right.png"
+         data-180p="opacity:0; top:8em; left:0%;"
+        data-185p=" display:initial; opacity:1; top:7em; left:88%;"
+        data-230p="top:7em; opacity:0;"
+      >
+      <div class="bullet"
+        data-190p="opacity:0; top:7em; left:120%;"
+        data-195p=" display:initial; opacity:1; top:7em; left:1000%;"
+        data-200p="opacity:0;"
+      >
+          
+      </div>
+    </div>
+
 
    <div class="hair">
   <div class="front-hair"></div>
@@ -84,11 +104,17 @@
 
 
 <!--Wings-->
-  <div class="left-wing">
+  <div class="left-wing"
+        data-190p="opacity:1;"
+        data-195p="opacity:0;"
+  >
     <img class="wings" src="https://pixabay.com/static/uploads/photo/2014/03/25/15/22/wing-296643_960_720.png">
   </div>
   
-  <div class="right-wing">
+  <div class="right-wing"
+        data-190p="opacity:1;"
+        data-195p="opacity:0; z-index:-11111"
+  >
     <img class="wings" src="https://pixabay.com/static/uploads/photo/2014/03/25/15/22/wing-296643_960_720.png">
   </div>
 
@@ -135,7 +161,7 @@
 
     <div id="slide-1" class="slide">
 
-    <audio autoplay>
+    <audio controls>
   <source src="jean-jacques-perrey-mary-france.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
@@ -199,7 +225,7 @@ Your browser does not support the audio element.
 
 <div id="ball">        
   <img src="img/ball.png"
-        data-180p="bottom:29%; right:21.5%;"
+        data-180p="bottom:29%; right:26.5%;"
         data-190p="bottom:80%; right:40%;"
         data-195p="bottom:45%; right:67%; opacity:1;"
         data-205p="bottom:85%; right:90%; opacity:0;"
@@ -207,8 +233,9 @@ Your browser does not support the audio element.
 </div>
 
 <div class="villain"
-
-        data-195p="bottom:37%; opacity:1; z-index:1;"
+        data-175p="bottom:0%; right:20%; opacity:0; z-index:-1;"
+        data-185p="bottom:37%; right:20%; opacity:1; z-index:1;"
+        data-195p="bottom:37%; right:4%; opacity:1; z-index:1;"
         data-200p="bottom:20%; opacity::0.5; display:initial; z-index:-11;"
         data-205p="bottom:0%; display:none;"
 ><!--Start of villain-->
@@ -225,7 +252,10 @@ Your browser does not support the audio element.
     <div class="villain-left-eye"></div>
     <div class="villain-right-eye"></div>
     <div class="villain-nose"></div>
-    <div class="villain-mouth">
+    <div class="villain-mouth"
+        data-185p="border-radius: 0% 0% 80% 80%; height:12px;"
+        data-195p="border-radius: 80% 80% 0% 0%; height:6px;"
+    >
       <div class="villain-tongue"></div>
     </div>
   </div><!--End of head-->
@@ -256,31 +286,46 @@ Your browser does not support the audio element.
 </div><!--End of villain-->
 
 <!--Start of Grave with crosses-->
-<div class="cross1">
+<div class="cross1"
+    data-200p="bottom:-10%; display:none; opacity:0;"
+        data-220p="bottom:20%; display:initial; display:initial; opacity:0.8;"
+        data-230p="bottom:25%; display:initial; opacity:1;"
+>
     <div class="crossX"></div>
   <div class="crossY"></div>
 </div>
 
-<div class="cross2">
+<div class="cross2"
+    data-200p="bottom:-10%; display:none; opacity:0;"
+        data-220p="bottom:20%; display:initial; display:initial; opacity:0.8;"
+        data-230p="bottom:23%; display:initial; opacity:1;"
+>
     <div class="crossX"></div>
   <div class="crossY"></div>
 </div>
 
-<div class="cross3">
+<div class="cross3"
+    data-200p="bottom:-10%; display:none; opacity:0;"
+        data-220p="bottom:20%; display:initial; display:initial; opacity:0.8;"
+        data-230p="bottom:25%; display:initial; opacity:1;"
+>
     <div class="crossX"></div>
   <div class="crossY"></div>
 </div>
 
-<div class="cross4">
+<div class="cross4"
+    data-200p="bottom:-10%; display:none; opacity:0;"
+        data-220p="bottom:20%; display:initial; display:initial; opacity:0.8;"
+        data-230p="bottom:23%; display:initial; opacity:1; "
+>
     <div class="crossX"></div>
   <div class="crossY"></div>
 </div>
 
 <div class="grave"
-
         data-200p="bottom:-10%; display:none; opacity:0; z-index:-11111;"
-        data-220p="bottom:20%; display:initial; z-index:-5; display:initial; opacity:0.8;"
-        data-230p="bottom:28%; display:initial; opacity:1; z-index:1;"
+        data-210p="bottom:20%; display:initial; z-index:-5; display:initial; opacity:0.8;"
+        data-220p="bottom:28%; display:initial; opacity:1; z-index:1;"
 >
 
 <p>R.I.P.<br>
@@ -441,7 +486,13 @@ Your browser does not support the audio element.
   <p>Click on me to start a riot</p>
 </div><!--End of shaw-arrow-->
 
-<div class="shaw">
+<div class="shaw"
+    data-600p="left:40%;margin-left:10%; z-index:1;"
+    data-700p="left:155%;margin-left:10%;"
+    data-800p="left:255%;margin-left:10%;"
+    data-900p="left:355%;margin-left:10%;"
+>
+
   <div class="shaw-hair">
     <div class="shaw-back-hair"></div>
     <div class="shaw-left-front-hair1"></div>

@@ -13,7 +13,7 @@ scrollTop: $("#slide-2").offset().top
 
  }, 10000);  
 
-
+/*
 setTimeout(function(){  
 
 $(".wings").remove(); 
@@ -21,6 +21,7 @@ $(".wings").remove();
 
  }, 17000);  
 
+*/
 
 $(document).keydown(function(e){
     switch (e.which){
