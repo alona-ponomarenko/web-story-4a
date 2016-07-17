@@ -2892,8 +2892,24 @@ animation: noiseAnim 0.5s infinite linear alternate;
 /**********End of Media Queries ***************/
 
 
+/*copy sound button*/
+.sound {
+  display: inline-block;
+  margin-left: 20px;
+  height: 89px;
+  width: 100px;
+  background: url(./img/sound.png);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
 
+.sound:hover {
+  background-position: bottom;
 
+}
+/*end copy sound button*/
 
 
 
