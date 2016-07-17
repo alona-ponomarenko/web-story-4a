@@ -135,7 +135,7 @@
 
     <div id="slide-1" class="slide">
 
-    <audio controls>
+    <audio autoplay>
   <source src="jean-jacques-perrey-mary-france.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
@@ -197,11 +197,22 @@ Your browser does not support the audio element.
   <div class="cloud x5"></div>
 
 
-<div id="ball">
-  <img src="img/ball.png">
+<div id="ball">        
+  <img src="img/ball.png"
+        data-180p="bottom:29%; right:21.5%;"
+        data-190p="bottom:80%; right:40%;"
+        data-195p="bottom:45%; right:67%; opacity:1;"
+        data-205p="bottom:85%; right:90%; opacity:0;"
+  >
 </div>
 
-<div class="villain"><!--Start of villain-->
+<div class="villain"
+
+        data-195p="bottom:37%; opacity:1; z-index:1;"
+        data-200p="bottom:20%; opacity::0.5; display:initial; z-index:-11;"
+        data-205p="bottom:0%; display:none;"
+><!--Start of villain-->
+
   <div class="villain-hair"></div>
  <div class="villain-left-front-hair1"></div>
   <div class="villain-left-front-hair2"></div>
@@ -265,7 +276,14 @@ Your browser does not support the audio element.
   <div class="crossY"></div>
 </div>
 
-<div class="grave"><p>R.I.P.<br>
+<div class="grave"
+
+        data-200p="bottom:-10%; display:none; opacity:0; z-index:-11111;"
+        data-220p="bottom:20%; display:initial; z-index:-5; display:initial; opacity:0.8;"
+        data-230p="bottom:28%; display:initial; opacity:1; z-index:1;"
+>
+
+<p>R.I.P.<br>
   Bad code is buried here</p>
   <div class="grass"></div>
 </div>
