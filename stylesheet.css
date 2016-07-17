@@ -2907,7 +2907,7 @@ animation: noiseAnim 0.5s infinite linear alternate;
 
 .sound:hover {
   background-position: bottom;
-
+  opacity:0.7;
 }
 /*end copy sound button*/
 
