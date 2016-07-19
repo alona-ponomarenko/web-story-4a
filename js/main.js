@@ -150,6 +150,26 @@ $(".dialogue-box-fan1").typed({
    });
 
 
+$(".shaw").click(function(){
+
+setTimeout(function(){ 
+$(".dialogue-box-shaw1").css("display", "block");
+$(".dialogue-box-shaw1").typed({
+        strings: ["<p>Root...</p>", "<p>I can't believe it's you!</p>", "<p> Of course I am in! I want the spinoff...SPINOFF! SPINOFF!</p>"],
+        typeSpeed: 0,
+        showCursor: false,
+        startDelay: 1000,
+      });
+}, 500); 
+
+
+setTimeout(function(){ 
+  $(".dialogue-box-shaw1").css("display", "none");
+}, 15000); 
+
+  });
+
+
 /******On page reload, go to the start (script for Chrome) ********/
 /*
 window.onbeforeunload = function(){
@@ -158,6 +178,7 @@ window.onbeforeunload = function(){
 
 */
 /******End of script for Chrome ********/
+
 
 /*copy mute script*/
 
@@ -170,4 +191,26 @@ document.getElementById('mute').addEventListener('click', function (e)
     e.preventDefault();
 }, false);
 
+
+ $(".sound").click(function(){
+        $("#mute").toggleClass("switch");
+    });
+
 /*end copy mute script*/
+
+
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 1300 && $(this).scrollTop() <=1350 || $(this).scrollTop() >= 6000 && $(this).scrollTop() <= 6200 ) {
+       $("#gunsound").trigger('play');
+    } 
+});
+
+
+$("#mute").click(function(){
+      $("#gunsound").detach();
+    });
+
+
+

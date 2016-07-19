@@ -962,7 +962,7 @@ Colors:
 
 
 .cardboard {
-  display: none;
+  /*display: none;*/
   position:absolute;
   top:-240%;
   right:-430%;
@@ -984,7 +984,7 @@ Colors:
 }
 
 .cardboard-stick {
-  display: none;
+  /*display: none;*/
   position:absolute;
   top:-130%;
   right:-130%;
@@ -992,6 +992,41 @@ Colors:
   width:0.5em;
   height:7em;
   transform:rotate(40deg);
+  background-color: #DBBA97;
+}
+
+
+.cardboard-left {
+  /*display: none;*/
+  position:absolute;
+  top:-240%;
+  left:-430%;
+  width:8em;
+  height:5em;
+  border:1px solid #000;
+  background-color:#DBBA97;
+  transform:rotate(-40deg);
+  z-index:1;
+}
+
+.cardboard-left p {
+  position: relative;
+  top:-10%;
+  color:#f00;
+  text-align:center;
+  font-size:2em;
+  font-weight:bold;
+}
+
+.cardboard-stick-left {
+  /*display: none;*/
+  position:absolute;
+  top:-130%;
+  left:-130%;
+  border:1px solid #000;
+  width:0.5em;
+  height:7em;
+  transform:rotate(-40deg);
   background-color: #DBBA97;
 }
 
@@ -1117,6 +1152,10 @@ Colors:
 /***********End of Slide 2 **************/
 
 /*********** Start of Slide 3 **************/
+
+#gunsound {
+    display: none;
+}
 
 #ball img{
   position: absolute;
@@ -2154,7 +2193,7 @@ padding:5% 0 5% 3%;
 }
 
 .dialogue-box-shaw1 {
-  /*display: none;*/
+  display: none;
 position:absolute;
 bottom:45%;
 left:-16em;
@@ -2403,11 +2442,13 @@ padding:5% 0 5% 3%;
   background-color:#F1D7B4;
 }
 
+/*
 @keyframes left-hand {
   0% {transform:rotate(initial)}
   50%{transform:rotate(120deg); top:-27%;}
   100% {transform:rotate(initial)}
 }
+*/
 
 .shaw-left-hand {
  position:absolute;
@@ -2418,10 +2459,12 @@ padding:5% 0 5% 3%;
  transform:rotate(50deg);
  background-color:#F1D7B4;
  border-radius: 25%;
+ /*
  animation-name: left-hand;
  animation-duration: 3s;
  animation-iteration-count:infinite;
  z-index:-11111;
+ */
 }
 
 .shaw-left-arm {
@@ -2437,11 +2480,13 @@ padding:5% 0 5% 3%;
   background-color:#F1D7B4;
 }
 
+/*
 @keyframes right-hand {
   0% {transform:rotate(initial)}
   50%{transform:rotate(-100deg); top:-20%;}
   100% {transform:rotate(initial)}
 }
+*/
 
 .shaw-right-hand {
  position:absolute;
@@ -2452,10 +2497,12 @@ padding:5% 0 5% 3%;
  transform:rotate(-50deg);
  background-color:#F1D7B4;
  border-radius: 25%;
+ /*
  animation-name: right-hand;
  animation-duration: 3s;
  animation-iteration-count:infinite;
  z-index:-11111;
+ */
 }
 
 .shaw-right-arm {
@@ -2933,17 +2980,20 @@ padding:5% 0 5% 3%;
 /*copy sound button*/
 .sound {
   display: inline-block;
-  margin-left: 20px;
+  margin: 20px;
   height: 89px;
   width: 100px;
-  background: url(./img/sound.png);
+  cursor: pointer;
+  background: url(http://res.cloudinary.com/alonap/image/upload/v1468839742/sound_tyaxm9.png
+);
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  background-position: top;
 }
 
-.sound:hover {
+ .switch {
   background-position: bottom;
   opacity:0.7;
 }
