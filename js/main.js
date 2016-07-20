@@ -23,14 +23,11 @@ $(".wings").remove();
 
 */
 
-
+/*
 $(document).keydown(function(e){
     switch (e.which){
 
     case 38:    //up arrow key
-        $(".root").finish().animate({
-            left: "-=3%"
-        });
 
         setTimeout(function(){  
 $(".root").ready(function(){
@@ -47,10 +44,7 @@ $(".root").ready(function(){
             }, 200); 
         break;
     case 40:    //bottom arrow key
-        $(".root").finish().animate({
-            left: "+=3%"
-        });
-
+        
         setTimeout(function(){  
 $(".root").ready(function(){
           $(".right-leg").addClass("right-move");
@@ -69,17 +63,18 @@ $(".root").ready(function(){
         break;
     }
 });
+*/
 
+/* Move Root on scroll and up/down arrow press*/
 
-/* Move Root on scroll */
 
 $(function() {
 
-$(window).on('wheel', function(e) {
+$(window).on('wheel keydown', function(e) {
 
   var delta = e.originalEvent.deltaY;
 
-  if (delta > 0) {
+  if (delta > 0 || e.keyCode == 40) {
 
    
     $(".left-leg").css("transform", "rotate(40deg)");
@@ -95,8 +90,7 @@ $(window).on('wheel', function(e) {
     $(".right-leg").css("transform", "rotate(0deg)");
      }, 200); 
 
-
-  } else { 
+  } else if (delta <0 || e.keyCode == 38) { 
 
     $(".left-leg").css("transform", "rotate(40deg)");
      $(".left-foot").css("left", "-7px"); 
@@ -110,13 +104,16 @@ $(window).on('wheel', function(e) {
     setTimeout(function(){  
     $(".right-leg").css("transform", "rotate(0deg)");
      }, 200); 
-};
+  }
+
+  else {};
 
 });
+
 });
 
 
-/* End of Move Root on scroll */
+/* End of Move Root on scroll and up/down arrow press*/
 
 
 
