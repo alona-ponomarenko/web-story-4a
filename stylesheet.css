@@ -426,6 +426,17 @@ html, body {
   left:75%;
 }
 
+.tiny-gun-left-class {
+  z-index: 1111111;
+}
+.tiny-gun-left-class img{
+  /* display: none;*/
+  position: absolute;
+  width:70%;
+   top:7em;
+   left:-65%;
+}
+
 .tiny-gun-right-class {
   z-index: 1111;
 }
@@ -960,9 +971,17 @@ Colors:
   z-index: 11111;
 }
 
+#small-iron-left {
+      display: none;
+      position: absolute;
+     top:55%;
+  left:-80%;
+      width:100%;
+      transform: rotate(40deg);
+}
 
 .cardboard {
-  /*display: none;*/
+  display: none;
   position:absolute;
   top:-240%;
   right:-430%;
@@ -984,7 +1003,7 @@ Colors:
 }
 
 .cardboard-stick {
-  /*display: none;*/
+  display: none;
   position:absolute;
   top:-130%;
   right:-130%;
@@ -1071,25 +1090,27 @@ Colors:
 
 .left-leg {
   position:relative;
-  bottom:3px;
+  bottom:6px;
   left:19px;
   width:12.5px;
-  height: 14px;
+  height: 16px;
   border:2px solid #000;
   background-color: #1E1F23;
   border-radius:25%;
   z-index:-1;
+  /*
   animation-name: left-leg;
   animation-duration:2s;
   animation-iteration-count: infinite;
+  */
 }
 
 .right-leg {
   position:relative;
-  bottom:21px;
+  bottom:26px;
   left:38px;
   width:12.5px;
-  height: 14px;
+  height: 16px;
   border:2px solid #000;
   background-color: #1E1F23;
   border-radius: 25%;
@@ -1110,7 +1131,7 @@ Colors:
 .left-foot {
   position:relative;
   top:80%;
-  left:-15%;
+  left:-2px;
   width:17.5px;
   height:10px;
   border:2px solid #000;
@@ -1121,7 +1142,7 @@ Colors:
 .right-foot {
   position:relative;
   top:80%;
-  left:-15%;
+  left:-2px;
   width:17.5px;
   height:10px;
   border:2px solid #000;
@@ -2107,6 +2128,27 @@ padding:5% 0 5% 3%;
   width:15%;
 }
 
+.comp p{
+  position: absolute;
+  top:18%;
+  right:20%;
+  font-size: 355%;
+  color:#fff;
+}
+
+.comp img {
+  position: absolute;
+  top:18%;
+  right:15%;
+  width:20%;
+}
+
+.small-lamp img {
+  position: absolute;
+  top:16%;
+  right:0;
+  width:15%;
+}
 .cup img {
   position: absolute;
   right: 35%;

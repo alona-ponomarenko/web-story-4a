@@ -73,16 +73,48 @@ $(".root").ready(function(){
 
 /* Move Root on scroll */
 
-$(document).scroll(function(){
-    $(".left-leg").css("transform", "rotate(30deg)");
+$(function() {
+
+$(window).on('wheel', function(e) {
+
+  var delta = e.originalEvent.deltaY;
+
+  if (delta > 0) {
+
+   
+    $(".left-leg").css("transform", "rotate(40deg)");
+    $(".left-foot").css("left", "-2px"); 
+    $(".left-foot").css("border-radius", "20% 40% 15% 10%");
     setTimeout(function(){  
     $(".left-leg").css("transform", "rotate(0deg)");
      }, 200); 
-    $(".right-leg").css("transform", "rotate(30deg)");
+    $(".right-leg").css("transform", "rotate(-40deg)");
+    $(".right-foot").css("left", "-2px"); 
+    $(".right-foot").css("border-radius", "20% 40% 15% 10%");
     setTimeout(function(){  
     $(".right-leg").css("transform", "rotate(0deg)");
      }, 200); 
+
+
+  } else { 
+
+    $(".left-leg").css("transform", "rotate(40deg)");
+     $(".left-foot").css("left", "-7px"); 
+    $(".left-foot").css("border-radius", "40% 20% 10% 15%");
+    setTimeout(function(){  
+    $(".left-leg").css("transform", "rotate(0deg)");
+     }, 200); 
+    $(".right-leg").css("transform", "rotate(-40deg)");
+      $(".right-foot").css("left", "-7px"); 
+    $(".right-foot").css("border-radius", "40% 20% 10% 15%");
+    setTimeout(function(){  
+    $(".right-leg").css("transform", "rotate(0deg)");
+     }, 200); 
+};
+
 });
+});
+
 
 /* End of Move Root on scroll */
 
