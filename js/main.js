@@ -3,6 +3,7 @@
  var s = skrollr.init();
 
 
+/*
 setTimeout(function(){  
 
 $('html, body').animate({
@@ -12,6 +13,7 @@ scrollTop: $("#slide-2").offset().top
 },1000);
 
  }, 10000);  
+*/
 
 /*
 setTimeout(function(){  
@@ -181,6 +183,7 @@ $(".dialogue-box-fan1").typed({
 
 $(".shaw").click(function(){
 
+$(".shaw-arrow").css("display:none;");
 setTimeout(function(){ 
 $(".dialogue-box-shaw1").css("display", "block");
 $(".dialogue-box-shaw1").typed({
