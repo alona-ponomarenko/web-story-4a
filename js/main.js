@@ -1,7 +1,21 @@
 
+var s = skrollr.init({
+    forceHeight: true,
+    smoothScrolling: true,
+    smoothScrollingDuration:350,
+    mobileDeceleration: 0
+});
 
- var s = skrollr.init();
 
+$(window).ready(function() {
+
+$("#slides").css("display", "block").fadeIn("slow");
+
+// Animate loader off screen
+
+$("#cssload-wrapper").fadeOut("fast");
+
+});
 
 /*
 setTimeout(function(){  
@@ -125,7 +139,7 @@ $(window).on('wheel keydown', function(e) {
 
 setTimeout(function(){ 
 $(".dialogue-box-root1").css("display", "block");
- }, 20000); 
+ }, 2); 
 
 setTimeout(function(){ 
 $(".dialogue-box-root1").css("display", "none");
@@ -136,10 +150,10 @@ $(".dialogue-box-root1").css("display", "none");
 
   $(function(){
       $(".dialogue-box-root1").typed({
-        strings: ["<p>What a beautiful day to shoot some bad guys!</p>", "<p>Lorem ipsum</p>"],
+        strings: ["<p>What a beautiful day to shoot some bad guys!</p>", "<p>Let's roll! It's gonna be a fun ride!</p>"],
         typeSpeed: 0,
         showCursor: false,
-        startDelay: 12000,
+        startDelay: 10,
       });
   });
 
@@ -159,7 +173,7 @@ var $w = $(window).scroll(function(){
 
 $(".dialogue-box-root2").css("display", "block");
 $(".dialogue-box-root2").typed({
-        strings: ["<p>Hey, kiddo!</p>", "<p>Why are you crying?</p>"],
+        strings: ["<p>Hey, kiddo!</p>", "<p>What's up? Who dared to make you sad?</p>"],
         typeSpeed: 0,
         showCursor: false,
         startDelay: 1000,
@@ -172,12 +186,24 @@ setTimeout(function(){
 setTimeout(function(){ 
 $(".dialogue-box-fan1").css("display", "block");
 $(".dialogue-box-fan1").typed({
-        strings: ["<p>I am crying because I want a spinoff so bad. I am one of many fans who are fighting like hell.</p>", "<p>We fight to see you and Shaw share the same screen again, but Netflix does not seem to hear us.</p>", "<p>You would not believe the things we do...</p>"],
+        strings: ["<p>I want a spinoff so bad. I am one of many fans who are fighting like hell.</p>", "<p>We fight to see you and Shaw share the same screen again, but no one does not seem to hear us.</p>", "<p>You would not believe the things we do...</p>"],
         typeSpeed: 0,
         showCursor: false,
         startDelay: 1000,
       });
-}, 5000); 
+}, 5000);
+
+setTimeout(function(){ 
+$(".dialogue-box-root3").css("display", "block");
+$(".dialogue-box-root3").typed({
+        strings: ["<p>I see!</p>", "<p>No worries! I am gonna take care of it! Cheer up, dear!</p>"],
+        typeSpeed: 0,
+        showCursor: false,
+      });
+setTimeout(function(){ 
+$(".dialogue-box-root3").css("display", "none");
+}, 10000);
+}, 32000); 
    });
 
 
@@ -201,6 +227,14 @@ setTimeout(function(){
 
   });
 
+$(".typed1").typed({
+        strings: ["<p> >If you can hear this, you're alone. <br> The only thing left of us is the sound of my voice. <br> Nah, just kidding. I am pretty much alive <br> and I am here to claim what belongs to me. <br> So are there any news about the spinoff?</p>" 
+        ],
+        typeSpeed: 0,
+        showCursor: false,
+        backDelay: 5000,
+        loop:true
+      });
 
 /******On page reload, go to the start (script for Chrome) ********/
 /*
@@ -231,7 +265,7 @@ document.getElementById('mute').addEventListener('click', function (e)
 /*end copy mute script*/
 
 
-
+/* Commented out for testing
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 1300 && $(this).scrollTop() <=1350 || $(this).scrollTop() >= 6000 && $(this).scrollTop() <= 6200 ) {
@@ -243,6 +277,13 @@ $(window).scroll(function() {
 $("#mute").click(function(){
       $("#gunsound").detach();
     });
+
+
+*/
+
+
+
+
 
 
 
